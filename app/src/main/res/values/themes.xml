@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ToDoList" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSecondaryVariant">@color/Dark_blue</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="MyBtnStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="iconTint">@color/grey</item>
+        <item name="textAllCaps">false</item>
+
+    </style>
+    <style name="MyBtnStyle.Activated" parent="MyBtnStyle">
+        <item name="strokeColor">@color/design_default_color_primary</item>
+    </style>
+
+    <style name="MyBtnStyleBlue" parent="MyBtnStyle">
+        <item name="background">?attr/colorPrimaryVariant</item>
+        <item name="iconTint">@color/blue</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+    <style name="DialogStyle" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+</resources>

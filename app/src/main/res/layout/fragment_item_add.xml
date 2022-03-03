@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_sv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false"
+    android:backgroundTint="@color/design_default_color_primary_dark">
+    <!--android:layout_alignParentEnd="true"-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+        <!--android:layout_gravity="bottom"-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/titleTE"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/Add_guide_R"
+            app:layout_constraintStart_toStartOf="@id/Add_guide_L"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="@string/addTitle"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/descriptionTE"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/Add_guide_R"
+            app:layout_constraintStart_toStartOf="@id/Add_guide_L"
+            app:layout_constraintTop_toBottomOf="@id/titleTE">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="@string/addDescription"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/calendar_add_btn"
+            style="@style/MyBtnStyleBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="0dp"
+            app:icon="@drawable/ic_calendar_blue"
+            app:layout_constraintStart_toStartOf="@id/Add_guide_L"
+            app:layout_constraintTop_toBottomOf="@id/descriptionTE"
+            app:strokeWidth="0dp" />
+
+        <Button
+            android:id="@+id/save_add_btn"
+            style="@style/MyBtnStyleBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@+id/calendar_add_btn"
+            app:layout_constraintEnd_toStartOf="@id/Add_guide_R"
+            app:layout_constraintTop_toTopOf="@+id/calendar_add_btn"
+            app:strokeWidth="0dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/Add_guide_L"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/Add_guide_R"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toStartOf="@id/Add_guide_R"
+            app:layout_constraintStart_toStartOf="@id/Add_guide_L"
+            app:layout_constraintTop_toBottomOf="@id/save_add_btn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

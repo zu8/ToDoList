@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ToDoList</string>
+    <string name="title">To Do List</string>
+    <string name="show">show finished</string>
+    <string name="hide">hide</string>
+    <string name="addTitle">Add title</string>
+    <string name="addDescription">Add description</string>
+    <string name="save">SAVE</string>
+</resources>
